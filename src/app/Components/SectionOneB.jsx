@@ -21,7 +21,7 @@ const SectionOneB = () => {
           <div><img src="image 9.svg"/></div>
           <div className='flex flex-col gap-y-[6px]'>
             <img src="Frame 1707478972.png"/>
-            <p className='text-[10px] md:text-[16px] text-[#2F2F2F]'>5 star Google rating</p>
+            <p className='text-[10px] md:text-[16px] text-[#2F2F2F]'><span className='hidden md:flex'>5 star Google</span> rating</p>
           </div>
         </div>
 

@@ -21,15 +21,29 @@ const Navbar = () => {
     }
 
     useGSAP(() => {
-        gsap.to(menuRef.current, {
-            rotationX: active ? 0 : "100%",
-            opacity: active ? 1 : 0,
-            duration: 0.5,
-            ease: "power2.out",
-            
-        });
+        if (active) {
+            gsap.to(menuRef.current, {
+                x: 0,
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out",
+            });
+        } else {
+            gsap.to(menuRef.current, {
+                x: "100%",
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.out",
+            });
+        }
     }, [active]); 
 
+    useEffect(() => {
+        gsap.set(menuRef.current, {
+            x: "100%",
+            opacity: 0,
+        });
+    }, [active]);
 
   return (
     <div>
@@ -54,16 +68,18 @@ const Navbar = () => {
         </div>
     </div>
 
-    {<div className='md:hidden flex'> <ul className='text-[#F6F6F6] text-[16px] py-[12px] px-[32px] bg-[#242323]  flex-col gap-y-8 flex gap-x-[33px] absolute w-[50%] right-0 h-[100vh] top-[8px] overflow-hidden z-40' ref={menuRef}>
+    { active && (<div className='md:hidden flex'> 
+    
+    <ul className='text-[#F6F6F6] text-[16px] py-[12px] px-[32px] bg-[#242323]  flex-col gap-y-8 flex gap-x-[33px] absolute w-[50%] right-0 h-[100vh] top-[8px] overflow-hidden z-40' ref={menuRef}>
 
-        <div className='flex items-end justify-end'><MdOutlineClose  className='text-white bg-[#80BC39] text-[25px] p-1 ' onClick={(e)=>setActive(false)}/></div>
-           <div className=' flex flex-col gap-y-6'>
-           <Link href={"/"}><li className={pathName === "/" ? "border-b-2 border-[#80BC39] w-fit" : ""}>Home</li></Link>
-            <Link href={"/"}><li >About</li></Link>
-            <Link href={"/"}><li>Blog</li></Link>
-            <Link href={"/"}><li>Support</li></Link>
-           </div>
-        </ul></div>}
+<div className='flex items-end justify-end'><MdOutlineClose  className='text-white bg-[#80BC39] text-[25px] p-1 ' onClick={(e)=>setActive(false)}/></div>
+   <div className=' flex flex-col gap-y-6'>
+   <Link href={"/"}><li className={pathName === "/" ? "border-b-2 border-[#80BC39] w-fit" : ""}>Home</li></Link>
+    <Link href={"/"}><li >About</li></Link>
+    <Link href={"/"}><li>Blog</li></Link>
+    <Link href={"/"}><li>Support</li></Link>
+   </div>
+</ul></div>)}
     </div>
   )
 }

@@ -15,11 +15,11 @@ const Section4A = () => {
       
         <div className='flex flex-col items-center justify-center gap-y-[32px]'>
                 <p className='text-[10px] bg-[#F5FDEC] flex flex-row items-center rounded-[16px] gap-x-[10px] px-[16px] py-[8px]'><AiOutlineThunderbolt /> what we offer</p>
-                <h1 className='md:text-[48px] text-[24px] font-bold text-white text-center'>Simplified Payments for Your <br />Relocation Dreams</h1>
+                <h1 className='md:text-[48px] text-[24px] pb-[1rem] font-bold text-white text-center'>Simplified Payments for Your <br />Relocation Dreams</h1>
         </div>
 
-        <div className='w-full flex flex-row items-center justify-between'>
-        <div className='w-[45%]'>
+        <div className='w-full flex flex-row items-center md:justify-between justify-center flex-wrap gap-y-[2rem]'>
+        <div className='w-[80%] md:w-[45%]'>
         
         <div  className='bg-[#FFFBE4] rounded-[24px] md:p-[40px] p-[20px]'>
 
@@ -47,7 +47,7 @@ const Section4A = () => {
         </div>
 
 
-        <div className='w-[45%]'>
+        <div className='w-[80%] md:w-[45%]'>
         
         <div  className='bg-[#E7F8FF] rounded-[24px] md:p-[40px] p-[20px]'>
 
