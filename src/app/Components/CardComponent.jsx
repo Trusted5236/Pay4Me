@@ -2,9 +2,9 @@ import React from 'react'
 
 const CardComponent = () => {
   return (
-    <div className='p-[2rem] w-full flex flex-row items-center justify-between flex-wrap gap-y-[1rem]'>
+    <div className='p-[2rem] w-full flex flex-row items-center justify-center md:justify-between flex-wrap gap-y-[1rem]'>
 
-<div className='w-[45%]  bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
+<div className='w-[80%] md:w-[45%]  bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
       <div className='flex flex-col items-start gap-y-[20px]'>
         <h1 className='font-bold text-[10px] md:text-[20px]'>{1}</h1>
         <h1 className='font-bold text-[12px] md:text-[24px]'>{"Download the Mobile App"}</h1>
@@ -18,7 +18,7 @@ const CardComponent = () => {
       </div>
     </div>
 
-    <div className='w-[45%] bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
+    <div className='w-[80%] md:w-[45%] bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
       <div className='flex flex-col items-start gap-y-[20px]'>
         <h1 className='font-bold text-[10px] md:text-[20px]'>{2}</h1>
         <h1 className='font-bold text-[12px] md:text-[24px]'>{"Sign up on the app."}</h1>
@@ -32,7 +32,7 @@ const CardComponent = () => {
       </div>
     </div>
 
-    <div className='w-[45%] bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
+    <div className='w-[80%] md:w-[45%] bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
       <div className='flex flex-col items-start gap-y-[20px]'>
         <h1 className='font-bold text-[10px] md:text-[20px]'>{3}</h1>
         <h1 className='font-bold text-[12px] md:text-[24px]'>{"Setup Payment Details"}</h1>
@@ -46,7 +46,7 @@ const CardComponent = () => {
       </div>
     </div>
 
-    <div className='w-[45%] bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
+    <div className='w-[80%] md:w-[45%] bg-[#FFFFFF] p-[16px] md:p-[32px] rounded-[24px] shadow-custom flex flex-col gap-y-[20px]'>
       <div className='flex flex-col items-start gap-y-[20px]'>
         <h1 className='font-bold text-[10px] md:text-[20px]'>{4}</h1>
         <h1 className='font-bold text-[12px] md:text-[24px]'>{"Complete Your Payment"}</h1>

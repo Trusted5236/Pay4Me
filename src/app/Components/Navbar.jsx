@@ -1,19 +1,36 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { MdMenu } from "react-icons/md";
 import { MdOutlineClose } from "react-icons/md";
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+
 
 
 
 const Navbar = () => {
+
     const pathName = usePathname()
     const [active, setActive] = useState(false)
+    const menuRef = useRef(null)
 
     const handleNav =(e)=>{
         setActive(!active)
     }
+
+    useGSAP(() => {
+        gsap.to(menuRef.current, {
+            rotationX: active ? 0 : "100%",
+            opacity: active ? 1 : 0,
+            duration: 0.5,
+            ease: "power2.out",
+            
+        });
+    }, [active]); 
+
+
   return (
     <div>
         <div className='bg-[#242323] w-full flex items-center py-[1rem] px-[2rem] justify-between md:pl-[16px] md:pr-[8px] md:pt-[8px] md:pb-[8px] rounded-[44px]'>
@@ -37,7 +54,7 @@ const Navbar = () => {
         </div>
     </div>
 
-    {active && <div className='md:hidden'> <ul className='text-[#F6F6F6] text-[16px] py-[12px] px-[32px] bg-[#242323]  flex-col gap-y-8 flex gap-x-[33px] absolute w-[50%] right-0 h-[100vh] top-[8px] overflow-hidden z-40'>
+    {<div className='md:hidden flex'> <ul className='text-[#F6F6F6] text-[16px] py-[12px] px-[32px] bg-[#242323]  flex-col gap-y-8 flex gap-x-[33px] absolute w-[50%] right-0 h-[100vh] top-[8px] overflow-hidden z-40' ref={menuRef}>
 
         <div className='flex items-end justify-end'><MdOutlineClose  className='text-white bg-[#80BC39] text-[25px] p-1 ' onClick={(e)=>setActive(false)}/></div>
            <div className=' flex flex-col gap-y-6'>
