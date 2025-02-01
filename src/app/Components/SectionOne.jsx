@@ -7,7 +7,7 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 
 const SectionOne = () => {
   return (
-    <div className='w-full flex flex-col items-center gap-y-[16px] md:gap-y-[32px] pt-[20px]'>
+    <div className='w-full flex flex-col items-center gap-y-[16px] md:gap-y-[32px] pt-[20px] px-[2rem]'>
 
       <div className='bg-[#E9F8D8] py-[4px] px-[8px] flex flex-row gap-x-[6px] items-center justify-center rounded-[32px] w-fit'>
       <AiOutlineThunderbolt className='w-[14px] h-[14px]'/>

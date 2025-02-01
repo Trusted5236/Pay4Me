@@ -2,7 +2,7 @@ import React from 'react'
 
 const SectionOneC = () => {
   return (
-    <div className='w-full flex flex-col items-center justify-center py-[2rem]'>
+    <div className='w-full flex flex-col items-center justify-center p-[2rem]'>
       <div>
         <p className='text-[#848484] text-[16px]'>Leading Brands Partner with us</p>
       </div>
